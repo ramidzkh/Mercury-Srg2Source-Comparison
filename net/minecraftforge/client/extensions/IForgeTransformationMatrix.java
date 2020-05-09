@@ -19,13 +19,13 @@
 
 package net.minecraftforge.client.extensions;
 
-import net.minecraft.client.util.math.MatrixStack;
-import net.minecraft.util.math.Direction;
-
+import net.minecraft.client.renderer.*;
 import net.minecraft.client.util.math.Matrix4f;
+import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.client.util.math.Rotation3;
 import net.minecraft.client.util.math.Vector3f;
 import net.minecraft.client.util.math.Vector4f;
+import net.minecraft.util.math.Direction;
 
 /*
  * Replacement interface for ModelRotation to allow custom transformations of vanilla models.

@@ -26,9 +26,8 @@ import java.util.concurrent.TimeUnit;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.MapMaker;
-
-import net.minecraft.entity.Entity;
 import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.entity.Entity;
 
 /**
  * A class to assist in the collection of data to measure the update times of ticking objects {currently Tile Entities and Entities}

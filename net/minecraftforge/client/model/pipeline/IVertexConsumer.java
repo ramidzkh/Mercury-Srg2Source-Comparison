@@ -19,8 +19,8 @@
 
 package net.minecraftforge.client.model.pipeline;
 
-import net.minecraft.client.texture.Sprite;
 import net.minecraft.client.render.VertexFormat;
+import net.minecraft.client.texture.Sprite;
 import net.minecraft.util.math.Direction;
 
 /**

@@ -24,7 +24,6 @@ import java.util.function.BiPredicate;
 import java.util.function.Supplier;
 
 import org.apache.commons.lang3.tuple.Pair;
-
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.resource.ResourcePack;

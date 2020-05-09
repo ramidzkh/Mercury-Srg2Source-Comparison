@@ -21,11 +21,6 @@ package net.minecraftforge.fml.network;
 
 import io.netty.buffer.Unpooled;
 import io.netty.util.Attribute;
-import net.minecraft.network.Packet;
-import net.minecraft.network.ClientConnection;
-import net.minecraft.util.PacketByteBuf;
-import net.minecraft.util.Identifier;
-
 import org.apache.commons.lang3.tuple.Pair;
 
 import java.io.ByteArrayOutputStream;
@@ -35,6 +30,10 @@ import java.util.HashSet;
 import java.util.Optional;
 import java.util.Set;
 import java.util.function.Supplier;
+import net.minecraft.network.ClientConnection;
+import net.minecraft.network.Packet;
+import net.minecraft.util.Identifier;
+import net.minecraft.util.PacketByteBuf;
 
 public class FMLMCRegisterPacketHandler {
     public static final FMLMCRegisterPacketHandler INSTANCE = new FMLMCRegisterPacketHandler();

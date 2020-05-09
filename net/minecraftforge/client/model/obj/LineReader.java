@@ -22,7 +22,6 @@ package net.minecraftforge.client.model.obj;
 import com.google.common.base.Charsets;
 import joptsimple.internal.Strings;
 import net.minecraft.resource.Resource;
-
 import javax.annotation.Nullable;
 import java.io.BufferedReader;
 import java.io.IOException;

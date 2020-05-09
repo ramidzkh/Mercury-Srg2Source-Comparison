@@ -32,17 +32,24 @@ import java.util.Optional;
 import java.util.TreeMap;
 
 import javax.annotation.Nullable;
-
 import net.minecraft.client.render.model.ModelBakeSettings;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import net.minecraft.client.render.model.json.ModelElement;
+import net.minecraft.client.renderer.*;
+import net.minecraft.client.util.math.Matrix4f;
+import net.minecraft.client.util.math.Rotation3;
+import net.minecraft.client.util.math.Vector3f;
 import net.minecraft.resource.Resource;
 import net.minecraft.resource.ResourceManager;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.MathHelper;
+import net.minecraft.util.math.Quaternion;
+import net.minecraftforge.client.model.animation.ModelBlockAnimation.Parameter.Interpolation;
+import net.minecraftforge.client.model.animation.ModelBlockAnimation.Parameter.Type;
+import net.minecraftforge.client.model.animation.ModelBlockAnimation.Parameter.Variable;
 import net.minecraftforge.common.animation.Event;
+import net.minecraftforge.common.model.TransformationHelper;
 import net.minecraftforge.common.model.animation.IClip;
 import net.minecraftforge.common.model.animation.IJoint;
 import net.minecraftforge.common.model.animation.IJointClip;
@@ -60,11 +67,6 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonParseException;
 import com.google.gson.annotations.SerializedName;
-
-import net.minecraft.client.util.math.Matrix4f;
-import net.minecraft.client.util.math.Rotation3;
-import net.minecraft.client.util.math.Vector3f;
-import net.minecraft.util.math.Quaternion;
 
 public class ModelBlockAnimation
 {

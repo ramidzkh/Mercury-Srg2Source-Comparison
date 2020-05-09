@@ -20,21 +20,21 @@
 package net.minecraftforge.common.model;
 
 import java.lang.reflect.Type;
+import java.util.EnumMap;
 import java.util.Map;
 
 import com.google.gson.*;
-import net.minecraft.util.math.MathHelper;
-
-
 import net.minecraft.client.render.model.json.Transformation;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-
+import net.minecraft.client.renderer.*;
 import net.minecraft.client.util.math.Matrix4f;
 import net.minecraft.client.util.math.Rotation3;
 import net.minecraft.client.util.math.Vector3f;
 import net.minecraft.client.util.math.Vector4f;
+import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Quaternion;
+import com.google.common.collect.Maps;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 
 public final class TransformationHelper
 {

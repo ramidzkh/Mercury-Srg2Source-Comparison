@@ -26,14 +26,14 @@ import java.util.Random;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
-import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.block.BlockState;
-import net.minecraft.client.util.math.Rotation3;
-import net.minecraft.client.render.model.BakedQuad;
 import net.minecraft.client.render.model.BakedModel;
-import net.minecraft.client.render.model.json.ModelTransformation.Mode;
+import net.minecraft.client.render.model.BakedQuad;
 import net.minecraft.client.render.model.json.ModelItemPropertyOverrideList;
+import net.minecraft.client.render.model.json.ModelTransformation.Mode;
 import net.minecraft.client.texture.Sprite;
+import net.minecraft.client.util.math.MatrixStack;
+import net.minecraft.client.util.math.Rotation3;
 import net.minecraft.util.math.Direction;
 
 public class BakedItemModel implements BakedModel

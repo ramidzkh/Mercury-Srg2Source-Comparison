@@ -43,7 +43,7 @@ class NamespacedWrapper<T extends IForgeRegistryEntry<T>> extends SimpleRegistry
     }
 
     @Override
-    public <V extends T> V set(int id, Identifier key, V value)
+    public <V extends T> V register(int id, Identifier key, V value)
     {
         if (locked)
             throw new IllegalStateException("Can not register to a locked registry. Modder should use Forge Register methods.");
@@ -60,15 +60,15 @@ class NamespacedWrapper<T extends IForgeRegistryEntry<T>> extends SimpleRegistry
     }
 
     @Override
-    public <R extends T> R add(Identifier key, R value)
+    public <R extends T> R register(Identifier key, R value)
     {
-        return set(-1, key, value);
+        return register(-1, key, value);
     }
 
     // Reading Functions
     @Override
     @Nullable
-    public T get(@Nullable Identifier name)
+    public T getOrDefault(@Nullable Identifier name)
     {
         return this.delegate.getRaw(name); //get without default
     }
@@ -81,7 +81,7 @@ class NamespacedWrapper<T extends IForgeRegistryEntry<T>> extends SimpleRegistry
 
     @Override
     @Nullable
-    public Identifier getId(T value)
+    public Identifier getKey(T value)
     {
         return this.delegate.getKey(value);
     }
@@ -93,14 +93,14 @@ class NamespacedWrapper<T extends IForgeRegistryEntry<T>> extends SimpleRegistry
     }
 
     @Override
-    public int getRawId(@Nullable T value)
+    public int getId(@Nullable T value)
     {
         return this.delegate.getID(value);
     }
 
     @Override
     @Nullable
-    public T get(int id)
+    public T getByValue(int id)
     {
         return this.delegate.getValue(id);
     }

@@ -23,13 +23,12 @@ import javax.annotation.Nullable;
 
 import io.netty.util.Attribute;
 import io.netty.util.AttributeKey;
-
-import net.minecraft.server.network.ServerPlayerEntity;
+import net.minecraft.network.ClientConnection;
 import net.minecraft.network.listener.PacketListener;
 import net.minecraft.server.network.ServerPlayNetworkHandler;
-import net.minecraft.network.ClientConnection;
-import net.minecraft.util.PacketByteBuf;
+import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.PacketByteBuf;
 import net.minecraft.util.thread.ThreadExecutor;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.fml.LogicalSidedProvider;

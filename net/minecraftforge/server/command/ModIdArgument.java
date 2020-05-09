@@ -25,7 +25,6 @@ import com.mojang.brigadier.context.CommandContext;
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import com.mojang.brigadier.suggestion.Suggestions;
 import com.mojang.brigadier.suggestion.SuggestionsBuilder;
-
 import net.minecraft.server.command.CommandSource;
 import net.minecraftforge.fml.ModContainer;
 import net.minecraftforge.fml.ModList;

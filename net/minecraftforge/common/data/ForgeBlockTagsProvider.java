@@ -20,15 +20,16 @@
 package net.minecraftforge.common.data;
 
 import net.minecraft.data.DataGenerator;
-import net.minecraft.util.DyeColor;
+import net.minecraft.data.server.BlockTagsProvider;
 import net.minecraft.tag.Tag;
+import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
-import net.minecraft.data.server.BlockTagsProvider;
 
+import static net.minecraftforge.common.Tags.Blocks.*;
 
 import java.nio.file.Path;
 import java.util.Locale;

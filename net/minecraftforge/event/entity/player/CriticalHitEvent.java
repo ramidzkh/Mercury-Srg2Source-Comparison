@@ -20,6 +20,8 @@
 package net.minecraftforge.event.entity.player;
 
 import net.minecraftforge.eventbus.api.Event.HasResult;
+import net.minecraftforge.eventbus.api.Cancelable;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 

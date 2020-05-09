@@ -25,42 +25,42 @@ import net.minecraft.block.AirBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Material;
+import net.minecraft.block.entity.BlockEntityType;
+import net.minecraft.container.ContainerType;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.entity.EntityType;
-import net.minecraft.entity.ai.brain.MemoryModuleType;
 import net.minecraft.entity.ai.brain.Activity;
+import net.minecraft.entity.ai.brain.MemoryModuleType;
 import net.minecraft.entity.ai.brain.Schedule;
 import net.minecraft.entity.ai.brain.sensor.SensorType;
+import net.minecraft.entity.data.TrackedDataHandler;
 import net.minecraft.entity.decoration.painting.PaintingMotive;
-import net.minecraft.village.VillagerProfession;
+import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.fluid.Fluid;
-import net.minecraft.container.ContainerType;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
-import net.minecraft.recipe.RecipeSerializer;
-import net.minecraft.entity.data.TrackedDataHandler;
 import net.minecraft.particle.ParticleType;
-import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.potion.Potion;
-import net.minecraft.state.StateManager;
+import net.minecraft.recipe.RecipeSerializer;
+import net.minecraft.sound.SoundEvent;
 import net.minecraft.stat.StatType;
-import net.minecraft.block.entity.BlockEntityType;
+import net.minecraft.state.StateManager;
 import net.minecraft.util.IdList;
 import net.minecraft.util.Identifier;
-import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.registry.DefaultedRegistry;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.registry.SimpleRegistry;
-import net.minecraft.world.poi.PointOfInterestType;
+import net.minecraft.village.VillagerProfession;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.source.BiomeSourceType;
 import net.minecraft.world.chunk.ChunkStatus;
-import net.minecraft.world.gen.chunk.ChunkGeneratorType;
 import net.minecraft.world.gen.carver.Carver;
+import net.minecraft.world.gen.chunk.ChunkGeneratorType;
+import net.minecraft.world.gen.decorator.Decorator;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.StructureFeature;
-import net.minecraft.world.gen.decorator.Decorator;
 import net.minecraft.world.gen.surfacebuilder.SurfaceBuilder;
+import net.minecraft.world.poi.PointOfInterestType;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.ModDimension;
 import net.minecraftforge.common.loot.GlobalLootModifierSerializer;
@@ -75,6 +75,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLModIdMappingEvent;
 import net.minecraftforge.fml.loading.AdvancedLogMessageAdapter;
 
 import net.minecraftforge.fml.loading.progress.StartupMessageManager;
+import net.minecraftforge.registries.GameData.ClearableObjectIntIdentityMap;
 import org.apache.commons.lang3.Validate;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -93,8 +94,7 @@ import java.util.function.Consumer;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
-
-import net.minecraftforge.fml.common.EnhancedRuntimeException.WrappedPrintStream;
+import static net.minecraftforge.registries.ForgeRegistry.REGISTRIES;
 
 /**
  * INTERNAL ONLY
@@ -433,7 +433,7 @@ public class GameData
             final ClearableObjectIntIdentityMap<BlockState> idMap = new ClearableObjectIntIdentityMap<BlockState>()
             {
                 @Override
-                public int getId(BlockState key)
+                public int get(BlockState key)
                 {
                     Integer integer = (Integer)this.idMap.get(key);
                     // There are some cases where this map is queried to serialize a state that is valid,

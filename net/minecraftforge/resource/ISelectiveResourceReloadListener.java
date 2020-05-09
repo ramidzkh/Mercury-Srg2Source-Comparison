@@ -20,7 +20,6 @@
 package net.minecraftforge.resource;
 
 import java.util.function.Predicate;
-
 import net.minecraft.resource.ResourceManager;
 import net.minecraft.resource.SynchronousResourceReloadListener;
 

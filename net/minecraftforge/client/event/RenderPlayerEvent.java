@@ -19,12 +19,15 @@
 
 package net.minecraftforge.client.event;
 
-import net.minecraft.client.util.math.MatrixStack;
+import net.minecraftforge.eventbus.api.Cancelable;
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.entity.PlayerEntityRenderer;
+import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 
+import javax.annotation.Nonnull;
 
 public abstract class RenderPlayerEvent extends PlayerEvent
 {

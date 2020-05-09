@@ -40,9 +40,8 @@ import org.apache.logging.log4j.MarkerManager;
 
 import com.google.common.collect.BiMap;
 import com.google.common.collect.HashBiMap;
-
-import net.minecraft.util.Int2ObjectBiMap;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Int2ObjectBiMap;
 import net.minecraft.util.registry.MutableRegistry;
 
 /**

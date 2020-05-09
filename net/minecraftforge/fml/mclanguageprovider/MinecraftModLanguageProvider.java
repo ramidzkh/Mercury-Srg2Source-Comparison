@@ -33,8 +33,7 @@ import java.util.Objects;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
 
-
-import net.minecraftforge.forgespi.language.IModLanguageProvider.IModLanguageLoader;
+import static net.minecraftforge.fml.Logging.LOADING;
 
 public class MinecraftModLanguageProvider implements IModLanguageProvider {
     private static final Logger LOGGER = LogManager.getLogger();

@@ -19,11 +19,11 @@
 
 package net.minecraftforge.common;
 
-import net.minecraft.block.CropBlock;
 import net.minecraft.block.FlowerBlock;
 import net.minecraft.block.SaplingBlock;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.CropBlock;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.BlockView;
 

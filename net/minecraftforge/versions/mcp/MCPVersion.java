@@ -22,6 +22,7 @@ package net.minecraftforge.versions.mcp;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import static net.minecraftforge.fml.Logging.CORE;
 
 public class MCPVersion {
     private static final Logger LOGGER = LogManager.getLogger();

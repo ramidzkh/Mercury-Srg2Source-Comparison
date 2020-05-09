@@ -21,14 +21,12 @@ package net.minecraftforge.client.model.pipeline;
 
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
-
-import org.apache.commons.lang3.tuple.Pair;
-
-import net.minecraft.client.render.model.BakedQuad;
-import net.minecraft.client.render.VertexFormats;
 import net.minecraft.client.render.VertexFormat;
 import net.minecraft.client.render.VertexFormatElement;
+import net.minecraft.client.render.VertexFormats;
+import net.minecraft.client.render.model.BakedQuad;
 import net.minecraft.util.math.Direction;
+import org.apache.commons.lang3.tuple.Pair;
 
 public class LightUtil
 {

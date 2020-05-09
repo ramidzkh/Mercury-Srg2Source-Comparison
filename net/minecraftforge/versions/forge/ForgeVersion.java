@@ -27,6 +27,7 @@ import org.apache.logging.log4j.Logger;
 
 import javax.annotation.Nullable;
 
+import static net.minecraftforge.fml.Logging.CORE;
 
 public class ForgeVersion
 {

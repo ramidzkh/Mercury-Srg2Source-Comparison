@@ -22,6 +22,7 @@ package net.minecraftforge.client.event.sound;
 import net.minecraft.client.sound.SoundInstance;
 import net.minecraft.client.sound.SoundSystem;
 import net.minecraft.client.sound.Source;
+import net.minecraftforge.eventbus.api.Event;
 
 public class SoundEvent extends net.minecraftforge.eventbus.api.Event
 {

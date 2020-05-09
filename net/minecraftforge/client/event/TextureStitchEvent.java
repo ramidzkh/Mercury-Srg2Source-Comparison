@@ -19,10 +19,9 @@
 
 package net.minecraftforge.client.event;
 
+import net.minecraft.client.texture.SpriteAtlasTexture;
 import net.minecraft.util.Identifier;
 import net.minecraftforge.eventbus.api.Event;
-import net.minecraft.client.texture.SpriteAtlasTexture;
-
 import java.util.Set;
 
 

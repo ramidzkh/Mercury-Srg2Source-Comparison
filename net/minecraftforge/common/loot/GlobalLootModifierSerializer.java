@@ -20,9 +20,8 @@
 package net.minecraftforge.common.loot;
 
 import com.google.gson.JsonObject;
-
-import net.minecraft.util.Identifier;
 import net.minecraft.loot.condition.LootCondition;
+import net.minecraft.util.Identifier;
 import net.minecraftforge.registries.GameData;
 import net.minecraftforge.registries.IForgeRegistryEntry;
 

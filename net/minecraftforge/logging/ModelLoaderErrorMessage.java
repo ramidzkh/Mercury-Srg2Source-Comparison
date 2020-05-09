@@ -25,13 +25,16 @@ import com.google.common.collect.Multimap;
 import net.minecraft.block.BlockState;
 import net.minecraft.client.render.block.BlockModels;
 import net.minecraft.client.util.ModelIdentifier;
+import net.minecraft.item.Item;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.registries.ForgeRegistries;
 
 import org.apache.logging.log4j.message.SimpleMessage;
 
 import java.util.Collection;
+import java.util.function.Function;
 
+import static net.minecraftforge.client.model.ModelLoader.getInventoryVariant;
 
 public class ModelLoaderErrorMessage extends SimpleMessage
 {

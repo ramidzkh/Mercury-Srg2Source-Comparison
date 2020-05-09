@@ -19,8 +19,8 @@
 
 package net.minecraftforge.fml.client.gui.screen;
 
-import net.minecraft.client.gui.widget.ButtonWidget;
 import net.minecraft.client.gui.screen.Screen;
+import net.minecraft.client.gui.widget.ButtonWidget;
 import net.minecraft.client.resource.language.I18n;
 import net.minecraft.text.TranslatableText;
 import net.minecraftforge.fml.StartupQuery;

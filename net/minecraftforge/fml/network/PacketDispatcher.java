@@ -19,13 +19,13 @@
 
 package net.minecraftforge.fml.network;
 
-import net.minecraft.network.ClientConnection;
-import net.minecraft.util.PacketByteBuf;
-import net.minecraft.util.Identifier;
 import org.apache.commons.lang3.tuple.Pair;
 
 import java.util.function.BiConsumer;
 import java.util.function.BiFunction;
+import net.minecraft.network.ClientConnection;
+import net.minecraft.util.Identifier;
+import net.minecraft.util.PacketByteBuf;
 
 /**
  * Dispatcher for sending packets in response to a received packet. Abstracts out the difference between wrapped packets

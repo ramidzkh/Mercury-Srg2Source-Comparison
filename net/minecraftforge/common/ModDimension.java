@@ -20,11 +20,10 @@
 package net.minecraftforge.common;
 
 import java.util.function.BiFunction;
-
 import net.minecraft.util.PacketByteBuf;
 import net.minecraft.world.World;
-import net.minecraft.world.biome.source.HorizontalVoronoiBiomeAccessType;
 import net.minecraft.world.biome.source.BiomeAccessType;
+import net.minecraft.world.biome.source.HorizontalVoronoiBiomeAccessType;
 import net.minecraft.world.dimension.Dimension;
 import net.minecraft.world.dimension.DimensionType;
 import net.minecraftforge.registries.ForgeRegistryEntry;

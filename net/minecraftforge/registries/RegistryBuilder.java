@@ -24,7 +24,6 @@ import java.util.List;
 import java.util.Set;
 
 import com.google.common.collect.Lists;
-
 import net.minecraft.util.Identifier;
 import net.minecraftforge.registries.IForgeRegistry.*;
 

@@ -20,8 +20,8 @@
 package net.minecraftforge.event.world;
 
 import net.minecraft.server.network.ServerPlayerEntity;
-import net.minecraft.util.math.ChunkPos;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.util.math.ChunkPos;
 import net.minecraftforge.eventbus.api.Event;
 
 /**

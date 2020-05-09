@@ -21,10 +21,11 @@ package net.minecraftforge.fml.network;
 
 import com.google.common.collect.Multimap;
 import net.minecraft.network.ClientConnection;
-import net.minecraft.util.Identifier;
 import net.minecraft.text.LiteralText;
+import net.minecraft.util.Identifier;
 import net.minecraftforge.fml.config.ConfigTracker;
 import net.minecraftforge.fml.loading.AdvancedLogMessageAdapter;
+import net.minecraftforge.fml.network.simple.SimpleChannel;
 import net.minecraftforge.fml.util.ThreeConsumer;
 import net.minecraftforge.registries.ForgeRegistry;
 import net.minecraftforge.registries.GameData;
@@ -42,6 +43,7 @@ import java.util.function.BiConsumer;
 import java.util.function.IntSupplier;
 import java.util.function.Supplier;
 
+import static net.minecraftforge.registries.ForgeRegistry.REGISTRIES;
 
 /**
  * Instance responsible for handling the overall FML network handshake.

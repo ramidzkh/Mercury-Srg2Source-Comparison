@@ -24,7 +24,6 @@ import java.util.Map;
 import java.util.Set;
 
 import javax.annotation.Nullable;
-
 import net.minecraft.util.Identifier;
 import net.minecraftforge.common.DimensionManager.SavedEntry;
 import net.minecraftforge.eventbus.api.Event;

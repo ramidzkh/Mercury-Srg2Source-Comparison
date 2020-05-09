@@ -19,20 +19,53 @@
 
 package net.minecraftforge.client;
 
+import static net.minecraftforge.client.event.RenderGameOverlayEvent.ElementType.BOSSINFO;
+import static net.minecraftforge.fml.VersionChecker.Status.BETA;
+import static net.minecraftforge.fml.VersionChecker.Status.BETA_OUTDATED;
+import static org.lwjgl.opengl.GL11.GL_COLOR_ARRAY;
+import static org.lwjgl.opengl.GL11.GL_NORMAL_ARRAY;
+import static org.lwjgl.opengl.GL11.GL_TEXTURE_COORD_ARRAY;
+import static org.lwjgl.opengl.GL11.GL_VERTEX_ARRAY;
+import static org.lwjgl.opengl.GL11.glColorPointer;
+import static org.lwjgl.opengl.GL11.glDisableClientState;
+import static org.lwjgl.opengl.GL11.glEnableClientState;
+import static org.lwjgl.opengl.GL11.glMultMatrixf;
+import static org.lwjgl.opengl.GL11.glNormalPointer;
+import static org.lwjgl.opengl.GL11.glTexCoordPointer;
+import static org.lwjgl.opengl.GL11.glVertexPointer;
+import static org.lwjgl.opengl.GL20.glDisableVertexAttribArray;
+import static org.lwjgl.opengl.GL20.glEnableVertexAttribArray;
+import static org.lwjgl.opengl.GL20.glVertexAttribPointer;
 
 import java.io.File;
 import java.lang.reflect.Field;
 import java.nio.Buffer;
 import java.nio.ByteBuffer;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Random;
 import java.util.Set;
 import java.util.stream.Stream;
 
 import javax.annotation.Nonnull;
 
-import net.minecraft.client.options.KeyBinding;
+import net.minecraft.client.renderer.*;
+import net.minecraft.client.resource.language.I18n;
+import net.minecraft.client.sound.SoundInstance;
+import net.minecraft.client.sound.SoundSystem;
+import net.minecraft.client.texture.NativeImage;
+import net.minecraft.client.texture.Sprite;
+import net.minecraft.client.texture.SpriteAtlasTexture;
+import net.minecraft.client.util.SpriteIdentifier;
+import net.minecraft.client.util.Window;
+import net.minecraft.client.util.math.Matrix4f;
+import net.minecraft.client.util.math.MatrixStack;
+import net.minecraft.client.util.math.Rotation3;
+import net.minecraft.client.util.math.Vector3f;
 import net.minecraftforge.client.event.RenderHandEvent;
+import net.minecraftforge.client.model.pipeline.LightUtil;
 import net.minecraftforge.fml.loading.progress.StartupMessageManager;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -41,51 +74,49 @@ import org.apache.logging.log4j.core.impl.ReusableLogEventFactory;
 import org.lwjgl.opengl.GL13;
 
 import com.google.common.collect.ImmutableList;
-import net.minecraft.client.util.math.MatrixStack;
-
-import net.minecraft.client.options.GameOptions;
-import net.minecraft.client.util.Window;
+import com.mojang.blaze3d.platform.GlStateManager;
+import com.mojang.blaze3d.systems.RenderSystem;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.Mouse;
-import net.minecraft.client.sound.SoundInstance;
-import net.minecraft.client.sound.SoundSystem;
-import net.minecraft.client.gui.hud.ClientBossBar;
-import net.minecraft.client.font.TextRenderer;
-import net.minecraft.client.gui.screen.TitleScreen;
-import net.minecraft.client.gui.screen.Screen;
-import net.minecraft.client.render.BackgroundRenderer.FogType;
 import net.minecraft.client.color.block.BlockColors;
 import net.minecraft.client.color.item.ItemColors;
-import net.minecraft.client.render.entity.model.BipedEntityModel;
-import net.minecraft.client.render.model.BakedModel;
-import net.minecraft.client.render.model.json.ModelTransformation;
-import net.minecraft.client.util.SpriteIdentifier;
-import net.minecraft.client.render.model.BakedModelManager;
-import net.minecraft.client.texture.SpriteAtlasTexture;
-import net.minecraft.client.texture.NativeImage;
-import net.minecraft.client.texture.Sprite;
+import net.minecraft.client.font.TextRenderer;
+import net.minecraft.client.gui.hud.ClientBossBar;
+import net.minecraft.client.gui.screen.Screen;
+import net.minecraft.client.gui.screen.TitleScreen;
+import net.minecraft.client.input.Input;
+import net.minecraft.client.options.GameOptions;
+import net.minecraft.client.options.KeyBinding;
+import net.minecraft.client.render.BackgroundRenderer.FogType;
+import net.minecraft.client.render.Camera;
+import net.minecraft.client.render.GameRenderer;
+import net.minecraft.client.render.RenderLayer;
+import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.VertexFormat;
 import net.minecraft.client.render.VertexFormatElement;
 import net.minecraft.client.render.VertexFormatElement.Type;
-import net.minecraft.client.resource.language.I18n;
+import net.minecraft.client.render.WorldRenderer;
+import net.minecraft.client.render.entity.model.BipedEntityModel;
+import net.minecraft.client.render.model.BakedModel;
+import net.minecraft.client.render.model.BakedModelManager;
+import net.minecraft.client.render.model.json.ModelTransformation;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.fluid.FluidState;
-import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.recipe.RecipeManager;
-import net.minecraft.util.math.Direction;
+import net.minecraft.util.Formatting;
 import net.minecraft.util.Hand;
-import net.minecraft.client.input.Input;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.hit.EntityHitResult;
-import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.hit.HitResult;
-import net.minecraft.util.Formatting;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Direction;
+import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.BlockRenderView;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
@@ -105,6 +136,8 @@ import net.minecraftforge.client.event.TextureStitchEvent;
 import net.minecraftforge.client.event.sound.PlaySoundEvent;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.client.model.animation.Animation;
+import net.minecraftforge.client.model.data.EmptyModelData;
+import net.minecraftforge.client.model.pipeline.QuadGatheringTransformer;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.model.TransformationHelper;
 import net.minecraftforge.eventbus.api.Event;
@@ -116,15 +149,6 @@ import net.minecraftforge.resource.ReloadRequirements;
 import net.minecraftforge.resource.SelectiveReloadStateHandler;
 import net.minecraftforge.resource.VanillaResourceType;
 import net.minecraftforge.versions.forge.ForgeVersion;
-
-import net.minecraft.client.render.Camera;
-import net.minecraft.client.render.GameRenderer;
-import net.minecraft.client.render.RenderLayer;
-import net.minecraft.client.render.VertexConsumerProvider;
-import net.minecraft.client.render.WorldRenderer;
-import net.minecraft.client.util.math.Matrix4f;
-import net.minecraft.client.util.math.Rotation3;
-import net.minecraft.client.util.math.Vector3f;
 
 public class ForgeHooksClient
 {
@@ -371,11 +395,11 @@ public class ForgeHooksClient
         modelLoader.onPostBakeEvent(modelRegistry);
     }
 
-    private static final minecraft.client.util.math.Matrix4f flipX;
-    private static final minecraft.client.util.math.Matrix3f flipXNormal;
+    private static final net.minecraft.client.util.math.Matrix4f flipX;
+    private static final net.minecraft.client.util.math.Matrix3f flipXNormal;
     static {
         flipX = Matrix4f.scale(-1,1,1);
-        flipXNormal = new minecraft.client.util.math.Matrix3f(flipX);
+        flipXNormal = new net.minecraft.client.util.math.Matrix3f(flipX);
     }
 
     public static BakedModel handleCameraTransforms(MatrixStack matrixStack, BakedModel model, ModelTransformation.Mode cameraTransformType, boolean leftHandHackery)
@@ -387,8 +411,8 @@ public class ForgeHooksClient
         if (!stack.isEmpty())
         {
             // Apply the transformation to the real matrix stack, flipping for left hand
-            minecraft.client.util.math.Matrix4f tMat = stack.peek().getModel();
-            minecraft.client.util.math.Matrix3f nMat = stack.peek().getNormal();
+            net.minecraft.client.util.math.Matrix4f tMat = stack.peek().getModel();
+            net.minecraft.client.util.math.Matrix3f nMat = stack.peek().getNormal();
             if (leftHandHackery)
             {
                 tMat.multiplyBackward(flipX);

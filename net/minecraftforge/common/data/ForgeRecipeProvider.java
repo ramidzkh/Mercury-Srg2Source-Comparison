@@ -32,21 +32,21 @@ import java.util.function.Consumer;
 import com.google.gson.JsonObject;
 
 import net.minecraft.block.Blocks;
-import net.minecraft.data.DataGenerator;
 import net.minecraft.data.DataCache;
-import net.minecraft.data.server.recipe.RecipeJsonProvider;
+import net.minecraft.data.DataGenerator;
 import net.minecraft.data.server.RecipesProvider;
+import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonFactory;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonFactory;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.Ingredient.Entry;
-import net.minecraft.recipe.Ingredient.TagEntry;
 import net.minecraft.recipe.Ingredient.StackEntry;
+import net.minecraft.recipe.Ingredient.TagEntry;
 import net.minecraft.tag.Tag;
-import net.minecraft.item.ItemConvertible;
 import net.minecraft.util.Identifier;
 import net.minecraftforge.common.Tags;
 

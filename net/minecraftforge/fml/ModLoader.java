@@ -56,6 +56,8 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
+import static net.minecraftforge.fml.Logging.CORE;
+import static net.minecraftforge.fml.Logging.LOADING;
 
 /**
  * Loads mods.

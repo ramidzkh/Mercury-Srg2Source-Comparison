@@ -19,9 +19,9 @@
 
 package net.minecraftforge.fluids.capability;
 
-import net.minecraft.nbt.CompoundTag;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityType;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.util.math.Direction;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.util.LazyOptional;

@@ -20,7 +20,6 @@
 package net.minecraftforge.common.crafting.conditions;
 
 import com.google.gson.JsonObject;
-
 import net.minecraft.util.Identifier;
 
 public final class TrueCondition implements ICondition

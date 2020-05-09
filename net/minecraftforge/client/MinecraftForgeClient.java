@@ -20,22 +20,27 @@
 package net.minecraftforge.client;
 
 import java.io.IOException;
+import java.lang.ref.WeakReference;
 import java.util.BitSet;
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Locale;
+import java.util.Map;
+import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Supplier;
 
 import javax.annotation.Nonnull;
-
-import net.minecraft.client.render.RenderLayer;
 import org.apache.commons.lang3.tuple.Pair;
 
+import com.google.common.cache.Cache;
 import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
-
 import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.chunk.ChunkRendererRegion;
 import net.minecraft.client.texture.NativeImage;
 import net.minecraft.resource.Resource;

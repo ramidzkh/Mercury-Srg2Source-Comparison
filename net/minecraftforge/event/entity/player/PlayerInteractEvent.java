@@ -24,20 +24,21 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ActionResult;
-import net.minecraft.util.math.Direction;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.Cancelable;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
+import static net.minecraftforge.eventbus.api.Event.Result.DEFAULT;
+import static net.minecraftforge.eventbus.api.Event.Result.DENY;
 
 import net.minecraftforge.fml.LogicalSide;
-
-import net.minecraftforge.eventbus.api.Event.Result;
 
 /**
  * PlayerInteractEvent is fired when a player interacts in some way.

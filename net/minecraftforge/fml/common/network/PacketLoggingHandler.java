@@ -29,13 +29,11 @@ import io.netty.channel.SimpleChannelInboundHandler;
 
 import java.util.Iterator;
 import java.util.List;
-
-
-import net.minecraft.network.NetworkSide;
-import net.minecraft.network.SplitterHandler;
-import net.minecraft.network.SizePrepender;
 import net.minecraft.network.ClientConnection;
+import net.minecraft.network.NetworkSide;
 import net.minecraft.network.Packet;
+import net.minecraft.network.SizePrepender;
+import net.minecraft.network.SplitterHandler;
 import net.minecraft.util.PacketByteBuf;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

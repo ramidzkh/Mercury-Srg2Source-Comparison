@@ -20,6 +20,7 @@
 package net.minecraftforge.server.timings;
 
 import java.lang.ref.WeakReference;
+import java.util.Arrays;
 
 /**
  * ForgeTimings aggregates timings data collected by {@link TimeTracker} for an Object

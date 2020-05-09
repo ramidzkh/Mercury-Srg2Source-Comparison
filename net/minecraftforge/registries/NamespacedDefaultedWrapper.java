@@ -28,7 +28,6 @@ import java.util.Set;
 import javax.annotation.Nullable;
 
 import org.apache.commons.lang3.Validate;
-
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.DefaultedRegistry;
 import org.apache.logging.log4j.LogManager;
@@ -47,7 +46,7 @@ class NamespacedDefaultedWrapper<T extends IForgeRegistryEntry<T>> extends Defau
     }
 
     @Override
-    public <V extends T> V set(int id, Identifier key, V value)
+    public <V extends T> V register(int id, Identifier key, V value)
     {
         if (locked)
             throw new IllegalStateException("Can not register to a locked registry. Modder should use Forge Register methods.");
@@ -64,9 +63,9 @@ class NamespacedDefaultedWrapper<T extends IForgeRegistryEntry<T>> extends Defau
     }
 
     @Override
-    public <V extends T> V add(Identifier key, V value)
+    public <V extends T> V register(Identifier key, V value)
     {
-        return set(-1, key, value);
+        return register(-1, key, value);
     }
 
     // Reading Functions
@@ -78,14 +77,14 @@ class NamespacedDefaultedWrapper<T extends IForgeRegistryEntry<T>> extends Defau
 
     @Override
     @Nullable
-    public T get(@Nullable Identifier name)
+    public T getOrDefault(@Nullable Identifier name)
     {
         return this.delegate.getValue(name); //getOrDefault
     }
 
     @Override
     @Nullable
-    public Identifier getId(T value)
+    public Identifier getKey(T value)
     {
         return this.delegate.getKey(value);
     }
@@ -97,14 +96,14 @@ class NamespacedDefaultedWrapper<T extends IForgeRegistryEntry<T>> extends Defau
     }
 
     @Override
-    public int getRawId(@Nullable T value)
+    public int getId(@Nullable T value)
     {
         return this.delegate.getID(value);
     }
 
     @Override
     @Nullable
-    public T get(int id)
+    public T getByValue(int id)
     {
         return this.delegate.getValue(id);
     }

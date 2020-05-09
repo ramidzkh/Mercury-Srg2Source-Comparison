@@ -19,9 +19,8 @@
 
 package net.minecraftforge.client.event;
 
-import net.minecraft.client.util.math.MatrixStack;
-
 import net.minecraft.block.BlockState;
+import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.math.BlockPos;
 import net.minecraftforge.eventbus.api.Cancelable;

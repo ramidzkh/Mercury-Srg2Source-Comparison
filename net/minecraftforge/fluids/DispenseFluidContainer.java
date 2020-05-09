@@ -23,12 +23,12 @@ import javax.annotation.Nonnull;
 
 import net.minecraft.block.DispenserBlock;
 import net.minecraft.block.dispenser.ItemDispenserBehavior;
-import net.minecraft.util.math.BlockPointer;
-import net.minecraft.item.ItemStack;
 import net.minecraft.block.entity.DispenserBlockEntity;
-import net.minecraft.util.math.Direction;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.Hand;
+import net.minecraft.util.math.BlockPointer;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
 import net.minecraftforge.fluids.capability.IFluidHandler;
 import net.minecraftforge.fluids.capability.IFluidHandlerItem;

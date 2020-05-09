@@ -22,10 +22,9 @@ package net.minecraftforge.server.permission.context;
 import com.google.common.base.Preconditions;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.ChunkPos;
-
+import net.minecraft.util.math.Direction;
 import javax.annotation.Nullable;
 
 public class BlockPosContext extends PlayerContext

@@ -28,6 +28,7 @@ import org.apache.logging.log4j.Logger;
 
 import java.util.List;
 
+import static net.minecraftforge.fml.loading.LogMarkers.LOADING;
 
 public class ServerModLoader
 {

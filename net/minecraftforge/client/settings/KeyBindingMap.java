@@ -19,10 +19,9 @@
 
 package net.minecraftforge.client.settings;
 
+import javax.annotation.Nullable;
 import net.minecraft.client.options.KeyBinding;
 import net.minecraft.client.util.InputUtil;
-
-import javax.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.EnumMap;

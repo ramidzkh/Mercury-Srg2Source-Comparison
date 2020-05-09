@@ -41,17 +41,16 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-
-import net.minecraft.resource.JsonDataLoader;
-import net.minecraft.util.profiler.Profiler;
-import net.minecraft.resource.Resource;
-import net.minecraft.resource.ResourceManager;
-import net.minecraft.util.JsonHelper;
-import net.minecraft.util.Identifier;
 import net.minecraft.loot.condition.LootCondition;
 import net.minecraft.loot.condition.LootConditions;
 import net.minecraft.loot.function.LootFunction;
 import net.minecraft.loot.function.LootFunctions;
+import net.minecraft.resource.JsonDataLoader;
+import net.minecraft.resource.Resource;
+import net.minecraft.resource.ResourceManager;
+import net.minecraft.util.Identifier;
+import net.minecraft.util.JsonHelper;
+import net.minecraft.util.profiler.Profiler;
 import net.minecraftforge.registries.ForgeRegistries;
 
 public class LootModifierManager extends JsonDataLoader {

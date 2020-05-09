@@ -19,8 +19,9 @@
 
 package net.minecraftforge.items.wrapper;
 
-import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.entity.LivingEntity;
+import net.minecraftforge.items.IItemHandler;
 
 /**
  * Exposes the armor inventory of an {@link EntityLivingBase} as an {@link IItemHandler} using {@link EntityLivingBase#getItemStackFromSlot} and

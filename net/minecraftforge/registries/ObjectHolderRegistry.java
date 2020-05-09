@@ -30,7 +30,6 @@ import java.util.Set;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
-
 import net.minecraft.util.Identifier;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
@@ -45,6 +44,8 @@ import org.apache.logging.log4j.Logger;
 import org.objectweb.asm.Opcodes;
 import org.objectweb.asm.Type;
 
+import static net.minecraftforge.fml.Logging.CORE;
+import static net.minecraftforge.registries.ForgeRegistry.REGISTRIES;
 
 /**
  * Internal registry for tracking {@link ObjectHolder} references

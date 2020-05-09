@@ -20,9 +20,8 @@
 package net.minecraftforge.registries;
 
 import com.google.common.reflect.TypeToken;
-
-import net.minecraft.util.Identifier;
 import javax.annotation.Nullable;
+import net.minecraft.util.Identifier;
 
 /**
  * Default implementation of IForgeRegistryEntry, this is necessary to reduce redundant code.

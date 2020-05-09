@@ -21,6 +21,7 @@ package net.minecraftforge.event.entity.player;
 
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
 import net.minecraftforge.eventbus.api.Event.HasResult;
 
 import java.util.Optional;

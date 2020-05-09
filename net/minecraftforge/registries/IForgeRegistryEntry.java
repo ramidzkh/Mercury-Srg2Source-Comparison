@@ -18,9 +18,8 @@
  */
 
 package net.minecraftforge.registries;
-import net.minecraft.util.Identifier;
-
 import javax.annotation.Nullable;
+import net.minecraft.util.Identifier;
 
 public interface IForgeRegistryEntry<V>
 {

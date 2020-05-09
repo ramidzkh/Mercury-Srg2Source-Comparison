@@ -21,12 +21,14 @@ package net.minecraftforge.event.world;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import net.minecraft.entity.EntityCategory;
+import net.minecraft.server.MinecraftServer;
+import net.minecraft.server.integrated.IntegratedServer;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IWorld;
-import net.minecraft.world.level.LevelInfo;
 import net.minecraft.world.biome.Biome.SpawnEntry;
+import net.minecraft.world.level.LevelInfo;
+import net.minecraftforge.eventbus.api.Cancelable;
 import net.minecraftforge.eventbus.api.Event;
 
 /**

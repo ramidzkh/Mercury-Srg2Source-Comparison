@@ -24,8 +24,6 @@ import net.minecraft.client.gui.widget.AbstractButtonWidget;
 import net.minecraft.client.gui.widget.ButtonWidget;
 import net.minecraftforge.fml.client.gui.GuiUtils;
 
-import net.minecraft.client.gui.widget.ButtonWidget.PressAction;
-
 /**
  * This class provides a button that fixes several bugs present in the vanilla GuiButton drawing code.
  * The gist of it is that it allows buttons of any size without gaps in the graphics and with the

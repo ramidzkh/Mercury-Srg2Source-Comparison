@@ -19,9 +19,9 @@
 
 package net.minecraftforge.fml.network;
 
-import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.container.Container;
 import net.minecraft.container.ContainerType;
+import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.util.PacketByteBuf;
 
 public interface IContainerFactory<T extends Container> extends ContainerType.Factory<T>

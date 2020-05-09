@@ -19,9 +19,9 @@
 
 package net.minecraftforge.common;
 
-import net.minecraft.util.math.Box;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.vehicle.AbstractMinecartEntity;
+import net.minecraft.util.math.Box;
 
 /**
  * This class defines a replacement for the default minecart collision code.

@@ -20,14 +20,13 @@
 package net.minecraftforge.common.extensions;
 
 import javax.annotation.Nullable;
-
 import net.minecraft.entity.Entity;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.tag.Tag;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.explosion.Explosion;
 import net.minecraft.world.WorldView;
+import net.minecraft.world.explosion.Explosion;
 
 public interface IForgeFluidState
 {

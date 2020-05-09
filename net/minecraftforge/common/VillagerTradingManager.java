@@ -19,18 +19,20 @@
 
 package net.minecraftforge.common;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.google.common.collect.Lists;
 
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap;
-import net.minecraft.village.VillagerProfession;
+import net.minecraft.util.DefaultedList;
 import net.minecraft.village.TradeOffers;
 import net.minecraft.village.TradeOffers.Factory;
-import net.minecraft.util.DefaultedList;
+import net.minecraft.village.VillagerProfession;
 import net.minecraftforge.event.village.VillagerTradesEvent;
 import net.minecraftforge.event.village.WandererTradesEvent;
 import net.minecraftforge.fml.event.server.FMLServerAboutToStartEvent;

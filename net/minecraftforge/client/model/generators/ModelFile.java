@@ -20,7 +20,6 @@
 package net.minecraftforge.client.model.generators;
 
 import com.google.common.base.Preconditions;
-
 import net.minecraft.resource.ResourceType;
 import net.minecraft.util.Identifier;
 

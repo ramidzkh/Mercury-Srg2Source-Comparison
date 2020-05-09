@@ -21,6 +21,8 @@ package net.minecraftforge.client.event;
 
 import net.minecraft.network.MessageType;
 import net.minecraft.text.Text;
+import net.minecraftforge.eventbus.api.Cancelable;
+import net.minecraftforge.eventbus.api.Event;
 
 @net.minecraftforge.eventbus.api.Cancelable
 public class ClientChatReceivedEvent extends net.minecraftforge.eventbus.api.Event

@@ -19,8 +19,8 @@
 
 package net.minecraftforge.common.crafting;
 
-import net.minecraft.inventory.CraftingResultInventory;
 import net.minecraft.inventory.CraftingInventory;
+import net.minecraft.inventory.CraftingResultInventory;
 
 /**
  * This interface is to be implemented on Container objects.

@@ -19,6 +19,9 @@
 
 package net.minecraftforge.event.entity;
 
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.ForgeEventFactory;
+import net.minecraftforge.eventbus.api.Cancelable;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LightningEntity;
 

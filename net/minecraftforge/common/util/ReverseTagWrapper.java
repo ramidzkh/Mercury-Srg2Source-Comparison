@@ -24,7 +24,6 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.function.IntSupplier;
 import java.util.function.Supplier;
-
 import net.minecraft.tag.TagContainer;
 import net.minecraft.util.Identifier;
 

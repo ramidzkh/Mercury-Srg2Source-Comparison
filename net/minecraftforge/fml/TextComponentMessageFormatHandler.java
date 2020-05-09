@@ -19,11 +19,10 @@
 
 package net.minecraftforge.fml;
 
-import net.minecraft.text.Text;
-import net.minecraft.text.LiteralText;
-import net.minecraft.text.TranslatableText;
-
 import java.util.List;
+import net.minecraft.text.LiteralText;
+import net.minecraft.text.Text;
+import net.minecraft.text.TranslatableText;
 
 public class TextComponentMessageFormatHandler {
     public static int handle(final TranslatableText parent, final List<Text> children, final Object[] formatArgs, final String format) {

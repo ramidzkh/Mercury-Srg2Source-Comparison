@@ -21,29 +21,13 @@ package net.minecraftforge.client.model;
 
 import java.util.function.Function;
 
+import com.google.common.cache.CacheBuilder;
+import com.google.common.cache.CacheLoader;
+import com.google.common.cache.LoadingCache;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;
-import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.block.BlockState;
 import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.util.math.Matrix4f;
-import net.minecraft.util.math.Quaternion;
-import net.minecraft.client.util.math.Rotation3;
-import net.minecraft.client.util.math.Vector3f;
-import net.minecraft.client.texture.SpriteAtlasTexture;
-import net.minecraft.client.texture.Sprite;
-import net.minecraft.util.math.Direction;
-import net.minecraft.util.Identifier;
-import net.minecraft.util.Util;
-import net.minecraftforge.common.ForgeConfig;
-
-import javax.annotation.Nullable;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
-import java.util.Random;
-import java.util.Set;
-
 import net.minecraft.client.render.model.BakedModel;
 import net.minecraft.client.render.model.BakedQuad;
 import net.minecraft.client.render.model.ModelBakeSettings;
@@ -51,7 +35,27 @@ import net.minecraft.client.render.model.ModelLoader;
 import net.minecraft.client.render.model.UnbakedModel;
 import net.minecraft.client.render.model.json.ModelItemPropertyOverrideList;
 import net.minecraft.client.render.model.json.ModelTransformation;
+import net.minecraft.client.renderer.model.*;
+import net.minecraft.client.texture.Sprite;
+import net.minecraft.client.texture.SpriteAtlasTexture;
 import net.minecraft.client.util.SpriteIdentifier;
+import net.minecraft.client.util.math.Matrix4f;
+import net.minecraft.client.util.math.MatrixStack;
+import net.minecraft.client.util.math.Rotation3;
+import net.minecraft.client.util.math.Vector3f;
+import net.minecraft.util.Identifier;
+import net.minecraft.util.Util;
+import net.minecraft.util.math.Direction;
+import net.minecraft.util.math.Quaternion;
+import net.minecraftforge.common.ForgeConfig;
+import net.minecraftforge.common.model.TransformationHelper;
+
+import javax.annotation.Nullable;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
+import java.util.Random;
+import java.util.Set;
 
 final class FancyMissingModel implements UnbakedModel
 {
@@ -111,7 +115,7 @@ final class FancyMissingModel implements UnbakedModel
         BakedModel bigMissing = missingModel.bake(bakery, spriteGetter, modelTransform, modelLocation);
         ModelTransformComposition smallState = new ModelTransformComposition(modelTransform, new SimpleModelTransform(smallTransformation));
         BakedModel smallMissing = missingModel.bake(bakery, spriteGetter, smallState, modelLocation);
-        return new BakedModel(bigMissing, smallMissing, fontRenderer, message, spriteGetter.apply(font2));
+        return new net.minecraftforge.client.model.FancyMissingModel.BakedModel(bigMissing, smallMissing, fontRenderer, message, spriteGetter.apply(font2));
     }
 
     static final class BakedModel implements BakedModel
@@ -127,14 +131,14 @@ final class FancyMissingModel implements UnbakedModel
         public BakedModel(BakedModel bigMissing, BakedModel smallMissing, SimpleModelFontRenderer fontRenderer, String message, Sprite fontTexture)
         {
             this.missingModel = bigMissing;
-            otherModel = new BakedModel(smallMissing, fontRenderer, message, fontTexture, this);
+            otherModel = new net.minecraftforge.client.model.FancyMissingModel.BakedModel(smallMissing, fontRenderer, message, fontTexture, this);
             this.big = true;
             this.fontRenderer = fontRenderer;
             this.message = message;
             this.fontTexture = fontTexture;
         }
 
-        public BakedModel(BakedModel smallMissing, SimpleModelFontRenderer fontRenderer, String message, Sprite fontTexture, BakedModel big)
+        public BakedModel(BakedModel smallMissing, SimpleModelFontRenderer fontRenderer, String message, Sprite fontTexture, net.minecraftforge.client.model.FancyMissingModel.BakedModel big)
         {
             this.missingModel = smallMissing;
             otherModel = big;

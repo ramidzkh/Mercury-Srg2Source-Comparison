@@ -22,13 +22,17 @@ package net.minecraftforge.client.model;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
-
 import net.minecraft.client.color.block.BlockColors;
+import net.minecraft.client.render.model.BakedModel;
+import net.minecraft.client.render.model.UnbakedModel;
+import net.minecraft.client.renderer.model.*;
 import net.minecraft.client.texture.Sprite;
 import net.minecraft.client.texture.SpriteAtlasTexture;
-import net.minecraft.util.profiler.Profiler;
+import net.minecraft.client.util.ModelIdentifier;
+import net.minecraft.client.util.SpriteIdentifier;
 import net.minecraft.resource.ResourceManager;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.profiler.Profiler;
 import net.minecraftforge.logging.ModelLoaderErrorMessage;
 
 import java.util.function.Function;
@@ -39,14 +43,9 @@ import org.apache.logging.log4j.Logger;
 
 import javax.annotation.Nullable;
 
+import static net.minecraftforge.fml.Logging.MODELLOADING;
 
-import net.minecraft.client.render.model.BakedModel;
-import net.minecraft.client.render.model.ModelLoader;
-import net.minecraft.client.render.model.UnbakedModel;
-import net.minecraft.client.util.ModelIdentifier;
-import net.minecraft.client.util.SpriteIdentifier;
-
-public final class ModelLoader extends ModelLoader
+public final class ModelLoader extends net.minecraft.client.render.model.ModelLoader
 {
     private static final Logger LOGGER = LogManager.getLogger();
     private final Map<Identifier, Exception> loadingExceptions = Maps.newHashMap();

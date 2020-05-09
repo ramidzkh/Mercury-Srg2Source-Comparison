@@ -25,9 +25,8 @@ import java.util.Set;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import net.minecraft.util.Identifier;
-
-
-
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 
 /**
  * Main interface for the registry system. Use this to query the registry system.

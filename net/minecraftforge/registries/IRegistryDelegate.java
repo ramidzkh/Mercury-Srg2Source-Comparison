@@ -19,9 +19,8 @@
 
 package net.minecraftforge.registries;
 
-import net.minecraft.util.Identifier;
-
 import java.util.function.Supplier;
+import net.minecraft.util.Identifier;
 
 
 /**

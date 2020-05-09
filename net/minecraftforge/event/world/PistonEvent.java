@@ -20,10 +20,9 @@
 package net.minecraftforge.event.world;
 
 import javax.annotation.Nullable;
-
 import net.minecraft.block.piston.PistonHandler;
-import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
 import net.minecraftforge.eventbus.api.Cancelable;
 

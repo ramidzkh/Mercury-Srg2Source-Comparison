@@ -19,6 +19,10 @@
 
 package net.minecraftforge.common;
 
+import static com.electronwill.nightconfig.core.ConfigSpec.CorrectionAction.ADD;
+import static com.electronwill.nightconfig.core.ConfigSpec.CorrectionAction.REMOVE;
+import static com.electronwill.nightconfig.core.ConfigSpec.CorrectionAction.REPLACE;
+import static net.minecraftforge.fml.Logging.CORE;
 
 import java.util.ArrayList;
 import java.util.Arrays;

@@ -31,9 +31,8 @@ import com.google.common.annotations.VisibleForTesting;
 import com.google.common.base.Preconditions;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-
-import net.minecraft.data.DataGenerator;
 import net.minecraft.data.DataCache;
+import net.minecraft.data.DataGenerator;
 import net.minecraft.data.DataProvider;
 import net.minecraft.resource.ResourceType;
 import net.minecraft.util.Identifier;

@@ -20,9 +20,8 @@
 package net.minecraftforge.common.crafting.conditions;
 
 import com.google.gson.JsonObject;
-
-import net.minecraft.util.JsonHelper;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.JsonHelper;
 import net.minecraftforge.registries.ForgeRegistries;
 
 public class ItemExistsCondition implements ICondition

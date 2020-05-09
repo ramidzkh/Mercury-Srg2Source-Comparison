@@ -20,7 +20,6 @@
 package net.minecraftforge.client;
 
 import javax.annotation.Nonnull;
-
 import net.minecraft.client.color.item.ItemColorProvider;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fluids.FluidUtil;

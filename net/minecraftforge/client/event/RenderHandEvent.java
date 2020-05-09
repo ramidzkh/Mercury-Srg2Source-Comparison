@@ -20,10 +20,8 @@
 package net.minecraftforge.client.event;
 
 import javax.annotation.Nonnull;
-
-import net.minecraft.client.util.math.MatrixStack;
-
 import net.minecraft.client.render.VertexConsumerProvider;
+import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Hand;
 import net.minecraftforge.eventbus.api.Cancelable;

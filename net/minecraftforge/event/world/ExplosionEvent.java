@@ -21,12 +21,13 @@ package net.minecraftforge.event.world;
 
 import java.util.List;
 
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.Cancelable;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.explosion.Explosion;
 import net.minecraft.world.World;
+import net.minecraft.world.explosion.Explosion;
 
 /** ExplosionEvent triggers when an explosion happens in the world.<br>
  * <br>

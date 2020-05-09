@@ -24,8 +24,8 @@ import com.google.gson.JsonObject;
 import net.minecraft.item.Item;
 import net.minecraft.tag.ItemTags;
 import net.minecraft.tag.Tag;
-import net.minecraft.util.JsonHelper;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.JsonHelper;
 
 public class TagEmptyCondition implements ICondition
 {

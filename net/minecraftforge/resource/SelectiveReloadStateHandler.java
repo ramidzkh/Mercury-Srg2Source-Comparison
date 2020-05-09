@@ -21,7 +21,6 @@ package net.minecraftforge.resource;
 
 import javax.annotation.Nullable;
 import java.util.function.Predicate;
-
 import net.minecraft.resource.SynchronousResourceReloadListener;
 import net.minecraftforge.common.ForgeConfig;
 

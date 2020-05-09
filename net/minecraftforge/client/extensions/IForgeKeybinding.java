@@ -20,7 +20,6 @@
 package net.minecraftforge.client.extensions;
 
 import javax.annotation.Nonnull;
-
 import net.minecraft.client.options.KeyBinding;
 import net.minecraft.client.util.InputUtil;
 import net.minecraftforge.client.settings.IKeyConflictContext;

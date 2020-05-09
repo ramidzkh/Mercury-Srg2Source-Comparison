@@ -20,12 +20,10 @@
 package net.minecraftforge.event.entity.player;
 
 import java.util.List;
-
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
-
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 

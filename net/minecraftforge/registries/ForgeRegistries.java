@@ -19,37 +19,38 @@
 
 package net.minecraftforge.registries;
 
+import net.minecraft.Bootstrap;
 import net.minecraft.block.Block;
+import net.minecraft.block.entity.BlockEntityType;
+import net.minecraft.container.ContainerType;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.entity.EntityType;
-import net.minecraft.entity.ai.brain.MemoryModuleType;
 import net.minecraft.entity.ai.brain.Activity;
+import net.minecraft.entity.ai.brain.MemoryModuleType;
 import net.minecraft.entity.ai.brain.Schedule;
 import net.minecraft.entity.ai.brain.sensor.SensorType;
 import net.minecraft.entity.decoration.painting.PaintingMotive;
-import net.minecraft.village.VillagerProfession;
-import net.minecraft.fluid.Fluid;
-import net.minecraft.container.ContainerType;
-import net.minecraft.Bootstrap;
-import net.minecraft.world.poi.PointOfInterestType;
-import net.minecraft.item.Item;
-import net.minecraft.recipe.RecipeSerializer;
-import net.minecraft.particle.ParticleType;
 import net.minecraft.entity.effect.StatusEffect;
+import net.minecraft.fluid.Fluid;
+import net.minecraft.item.Item;
+import net.minecraft.particle.ParticleType;
 import net.minecraft.potion.Potion;
-import net.minecraft.stat.StatType;
-import net.minecraft.block.entity.BlockEntityType;
+import net.minecraft.recipe.RecipeSerializer;
 import net.minecraft.sound.SoundEvent;
+import net.minecraft.stat.StatType;
+import net.minecraft.village.VillagerProfession;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.source.BiomeSourceType;
 import net.minecraft.world.chunk.ChunkStatus;
-import net.minecraft.world.gen.chunk.ChunkGeneratorType;
 import net.minecraft.world.gen.carver.Carver;
-import net.minecraft.world.gen.feature.Feature;
+import net.minecraft.world.gen.chunk.ChunkGeneratorType;
 import net.minecraft.world.gen.decorator.Decorator;
+import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.surfacebuilder.SurfaceBuilder;
+import net.minecraft.world.poi.PointOfInterestType;
 import net.minecraftforge.common.ModDimension;
 import net.minecraftforge.common.loot.GlobalLootModifierSerializer;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 /**
  * A class that exposes static references to all vanilla and Forge registries.

@@ -21,7 +21,6 @@ package net.minecraftforge.fml.client.registry;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-
 import net.minecraft.client.render.entity.EntityRenderDispatcher;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;

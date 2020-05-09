@@ -24,10 +24,10 @@ import javax.annotation.Nonnull;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
-import net.minecraft.nbt.CompoundTag;
 import net.minecraft.block.entity.BlockEntity;
-import net.minecraft.util.math.Box;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Box;
 import net.minecraft.world.World;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
@@ -63,7 +63,7 @@ public interface IForgeTileEntity extends ICapabilitySerializable<CompoundTag>
      * @param net The NetworkManager the packet originated from
      * @param pkt The data packet
      */
-    default void onDataPacket(net.minecraft.network.ClientConnection net, minecraft.network.packet.s2c.play.BlockEntityUpdateS2CPacket pkt){ }
+    default void onDataPacket(net.minecraft.network.ClientConnection net, net.minecraft.network.packet.s2c.play.BlockEntityUpdateS2CPacket pkt){ }
 
     /**
      * Called when the chunk's TE update tag, gotten from {@link #getUpdateTag()}, is received on the client.

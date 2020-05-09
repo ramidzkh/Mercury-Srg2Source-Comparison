@@ -20,15 +20,6 @@
 package net.minecraftforge.client.model;
 
 import com.mojang.datafixers.util.Pair;
-import net.minecraft.client.texture.Sprite;
-import net.minecraft.util.Identifier;
-import net.minecraftforge.client.model.geometry.IModelGeometry;
-import net.minecraftforge.client.model.geometry.IModelGeometryPart;
-
-import javax.annotation.Nullable;
-import java.util.*;
-import java.util.function.Function;
-
 import net.minecraft.client.render.model.BakedModel;
 import net.minecraft.client.render.model.ModelBakeSettings;
 import net.minecraft.client.render.model.ModelLoader;
@@ -36,7 +27,16 @@ import net.minecraft.client.render.model.UnbakedModel;
 import net.minecraft.client.render.model.json.JsonUnbakedModel;
 import net.minecraft.client.render.model.json.ModelItemPropertyOverrideList;
 import net.minecraft.client.render.model.json.ModelTransformation;
+import net.minecraft.client.renderer.model.*;
+import net.minecraft.client.texture.Sprite;
 import net.minecraft.client.util.SpriteIdentifier;
+import net.minecraft.util.Identifier;
+import net.minecraftforge.client.model.geometry.IModelGeometry;
+import net.minecraftforge.client.model.geometry.IModelGeometryPart;
+
+import javax.annotation.Nullable;
+import java.util.*;
+import java.util.function.Function;
 
 public class BlockModelConfiguration implements IModelConfiguration
 {

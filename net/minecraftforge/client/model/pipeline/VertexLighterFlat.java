@@ -21,20 +21,18 @@ package net.minecraftforge.client.model.pipeline;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;
-import net.minecraft.client.util.math.MatrixStack;
-
 import net.minecraft.block.BlockState;
-import net.minecraft.client.render.LightmapTextureManager;
-import net.minecraft.client.util.math.Vector3f;
 import net.minecraft.client.color.block.BlockColors;
-import net.minecraft.client.texture.Sprite;
-import net.minecraft.client.render.VertexFormats;
+import net.minecraft.client.render.LightmapTextureManager;
 import net.minecraft.client.render.VertexFormat;
 import net.minecraft.client.render.VertexFormatElement;
-import net.minecraft.util.math.Direction;
+import net.minecraft.client.render.VertexFormats;
+import net.minecraft.client.texture.Sprite;
+import net.minecraft.client.util.math.MatrixStack;
+import net.minecraft.client.util.math.Vector3f;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Direction;
 import net.minecraft.world.BlockRenderView;
-
 import java.util.List;
 import java.util.Objects;
 
@@ -220,7 +218,7 @@ public class VertexLighterFlat extends QuadGatheringTransformer
                 switch(element.getType())
                 {
                     case POSITION:
-                        final minecraft.client.util.math.Vector4f pos = new minecraft.client.util.math.Vector4f(
+                        final net.minecraft.client.util.math.Vector4f pos = new net.minecraft.client.util.math.Vector4f(
                                 position[v][0], position[v][1], position[v][2], 1);
                         pos.transform(pose.getModel());
 
@@ -230,7 +228,7 @@ public class VertexLighterFlat extends QuadGatheringTransformer
                         parent.put(e, position[v]);
                         break;
                     case NORMAL:
-                        final minecraft.client.util.math.Vector3f norm = new minecraft.client.util.math.Vector3f(normal[v]);
+                        final net.minecraft.client.util.math.Vector3f norm = new net.minecraft.client.util.math.Vector3f(normal[v]);
                         norm.transform(pose.getNormal());
 
                         normal[v][0] = norm.getX();

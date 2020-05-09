@@ -22,7 +22,6 @@ package net.minecraftforge.fml.packs;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
-
 import net.minecraft.resource.AbstractFileResourcePack;
 
 public abstract class DelegatableResourcePack extends AbstractFileResourcePack

@@ -38,6 +38,7 @@ import org.apache.logging.log4j.Logger;
 import java.util.Optional;
 import java.util.function.Consumer;
 
+import static net.minecraftforge.fml.Logging.LOADING;
 
 public class FMLModContainer extends ModContainer
 {

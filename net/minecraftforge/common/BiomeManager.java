@@ -26,10 +26,9 @@ import java.util.List;
 import com.google.common.collect.ImmutableList;
 
 import net.minecraft.world.biome.Biomes;
+import net.minecraft.world.biome.source.BiomeSource;
 import net.minecraft.util.WeightedPicker;
 import net.minecraft.world.biome.Biome;
-import net.minecraft.world.biome.source.BiomeSource;
-
 import javax.annotation.Nullable;
 
 public class BiomeManager

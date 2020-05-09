@@ -19,13 +19,13 @@
 
 package net.minecraftforge.fml.client.gui.widget;
 
+import net.minecraftforge.fml.client.gui.screen.ModListScreen;
+import net.minecraftforge.versions.forge.ForgeVersion;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.font.TextRenderer;
 import net.minecraft.client.gui.DrawableHelper;
 import net.minecraft.client.gui.widget.AlwaysSelectedEntryListWidget;
 import net.minecraft.util.Identifier;
-import net.minecraftforge.fml.client.gui.screen.ModListScreen;
-import net.minecraftforge.versions.forge.ForgeVersion;
 import net.minecraftforge.fml.MavenVersionStringHelper;
 import net.minecraftforge.fml.VersionChecker;
 import net.minecraftforge.fml.loading.moddiscovery.ModInfo;

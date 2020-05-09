@@ -27,7 +27,6 @@ import java.util.function.Function;
 import javax.annotation.Nonnull;
 
 import com.google.gson.JsonArray;
-
 import net.minecraft.tag.Tag;
 import net.minecraft.tag.TagContainer;
 import net.minecraft.util.Identifier;

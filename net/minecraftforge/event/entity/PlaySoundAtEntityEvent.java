@@ -19,9 +19,13 @@
 
 package net.minecraftforge.event.entity;
 
-import net.minecraft.entity.Entity;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvent;
+import net.minecraft.world.World;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.eventbus.api.Cancelable;
+import net.minecraft.entity.Entity;
 
 /**
  * PlaySoundAtEntityEvent is fired a sound is to be played at an Entity<br>

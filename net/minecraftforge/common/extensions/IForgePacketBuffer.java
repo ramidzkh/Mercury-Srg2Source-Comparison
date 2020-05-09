@@ -20,8 +20,8 @@
 package net.minecraftforge.common.extensions;
 
 import com.google.common.base.Preconditions;
-import net.minecraft.util.PacketByteBuf;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.PacketByteBuf;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.registries.ForgeRegistry;
 import net.minecraftforge.registries.IForgeRegistry;

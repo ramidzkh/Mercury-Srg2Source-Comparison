@@ -22,7 +22,6 @@ package net.minecraftforge.client.model.obj;
 import com.google.common.collect.Maps;
 import joptsimple.internal.Strings;
 import net.minecraft.client.util.math.Vector4f;
-
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.Map;

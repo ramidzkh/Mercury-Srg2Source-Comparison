@@ -39,6 +39,7 @@ import org.objectweb.asm.Type;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
+import static net.minecraftforge.fml.Logging.CAPABILITIES;
 
 public enum CapabilityManager
 {

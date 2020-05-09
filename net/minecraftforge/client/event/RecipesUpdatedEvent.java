@@ -20,6 +20,7 @@
 package net.minecraftforge.client.event;
 
 import net.minecraft.recipe.RecipeManager;
+import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.eventbus.api.Event;
 
 /**

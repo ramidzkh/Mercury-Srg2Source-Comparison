@@ -21,12 +21,10 @@ package net.minecraftforge.client.extensions;
 
 import java.util.Collection;
 import java.util.function.Function;
-
-import com.google.common.collect.ImmutableList;
-
 import net.minecraft.client.texture.Sprite;
 import net.minecraft.resource.ResourceManager;
 import net.minecraft.util.Identifier;
+import com.google.common.collect.ImmutableList;
 
 public interface IForgeTextureAtlasSprite
 {

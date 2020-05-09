@@ -21,6 +21,7 @@ package net.minecraftforge.fml;
 
 import com.google.common.io.ByteStreams;
 import com.google.gson.Gson;
+import net.minecraftforge.common.ForgeConfig;
 import net.minecraftforge.fml.loading.FMLConfig;
 import net.minecraftforge.fml.loading.moddiscovery.ModInfo;
 import net.minecraftforge.forgespi.language.IModInfo;
@@ -45,7 +46,23 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.net.URLConnection;
+import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.LinkedHashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
+import static net.minecraftforge.fml.VersionChecker.Status.*;
 
 public class VersionChecker
 {

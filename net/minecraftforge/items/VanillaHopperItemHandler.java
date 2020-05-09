@@ -19,8 +19,8 @@
 
 package net.minecraftforge.items;
 
-import net.minecraft.item.ItemStack;
 import net.minecraft.block.entity.HopperBlockEntity;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.items.wrapper.InvWrapper;
 
 import javax.annotation.Nonnull;

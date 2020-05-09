@@ -20,24 +20,23 @@
 package net.minecraftforge.common.extensions;
 
 import java.util.function.LongFunction;
-
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.screen.CustomizeBuffetLevelScreen;
 import net.minecraft.client.gui.screen.CustomizeFlatLevelScreen;
 import net.minecraft.client.gui.screen.world.CreateWorldScreen;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.World;
-import net.minecraft.world.level.LevelGeneratorType;
-import net.minecraft.world.gen.chunk.ChunkGenerator;
-import net.minecraft.world.biome.layer.util.LayerSampleContext;
-import net.minecraft.world.gen.chunk.OverworldChunkGeneratorConfig;
-import net.minecraft.world.biome.layer.util.LayerSampler;
-import net.minecraft.world.biome.layer.util.LayerFactory;
 import net.minecraft.world.biome.layer.AddBambooJungleLayer;
-import net.minecraft.world.biome.layer.SetBaseBiomesLayer;
+import net.minecraft.world.biome.layer.BiomeLayers;
 import net.minecraft.world.biome.layer.EaseBiomeEdgeLayer;
 import net.minecraft.world.biome.layer.ScaleLayer;
-import net.minecraft.world.biome.layer.BiomeLayers;
+import net.minecraft.world.biome.layer.SetBaseBiomesLayer;
+import net.minecraft.world.biome.layer.util.LayerFactory;
+import net.minecraft.world.biome.layer.util.LayerSampleContext;
+import net.minecraft.world.biome.layer.util.LayerSampler;
+import net.minecraft.world.gen.chunk.ChunkGenerator;
+import net.minecraft.world.gen.chunk.OverworldChunkGeneratorConfig;
+import net.minecraft.world.level.LevelGeneratorType;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 

@@ -55,6 +55,7 @@ import org.apache.maven.artifact.versioning.ArtifactVersion;
 import com.google.common.io.ByteStreams;
 import com.google.common.io.Files;
 
+import net.minecraftforge.versions.forge.ForgeVersion;
 import net.minecraftforge.fml.loading.FMLEnvironment;
 
 public class LibraryManager

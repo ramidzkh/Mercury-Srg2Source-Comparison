@@ -19,10 +19,10 @@
 
 package net.minecraftforge.items;
 
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.inventory.Inventory;
-import net.minecraft.inventory.BasicInventory;
 import net.minecraft.container.Slot;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.inventory.BasicInventory;
+import net.minecraft.inventory.Inventory;
 import net.minecraft.item.ItemStack;
 import javax.annotation.Nonnull;
 

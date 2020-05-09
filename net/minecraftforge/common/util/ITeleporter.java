@@ -22,7 +22,9 @@ package net.minecraftforge.common.util;
 import java.util.function.Function;
 
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.world.dimension.Dimension;
 
 /**
  * Interface for handling the placement of entities during dimension change.

@@ -20,12 +20,9 @@
 package net.minecraftforge.fml.client.gui.widget;
 
 import com.mojang.blaze3d.systems.RenderSystem;
-
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.widget.ButtonWidget;
 import net.minecraftforge.fml.client.gui.GuiUtils;
-
-import net.minecraft.client.gui.widget.ButtonWidget.PressAction;
 
 /**
  * This class provides a button that shows a string glyph at the beginning. The glyph can be scaled using the glyphScale parameter.

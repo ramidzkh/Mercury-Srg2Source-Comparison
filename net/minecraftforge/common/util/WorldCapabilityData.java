@@ -20,10 +20,9 @@
 package net.minecraftforge.common.util;
 
 import javax.annotation.Nullable;
-
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.world.dimension.Dimension;
 import net.minecraft.world.PersistentState;
+import net.minecraft.world.dimension.Dimension;
 
 public class WorldCapabilityData extends PersistentState
 {

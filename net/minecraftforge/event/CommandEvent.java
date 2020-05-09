@@ -21,6 +21,7 @@ package net.minecraftforge.event;
 
 import com.mojang.brigadier.ParseResults;
 import net.minecraft.server.command.ServerCommandSource;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.Cancelable;
 import net.minecraftforge.eventbus.api.Event;
 

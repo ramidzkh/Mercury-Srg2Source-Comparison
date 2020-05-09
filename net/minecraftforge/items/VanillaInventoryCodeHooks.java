@@ -19,15 +19,16 @@
 
 package net.minecraftforge.items;
 
+import net.minecraft.block.Block;
 import net.minecraft.block.DropperBlock;
 import net.minecraft.block.HopperBlock;
-import net.minecraft.item.ItemStack;
-import net.minecraft.block.entity.Hopper;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.DispenserBlockEntity;
+import net.minecraft.block.entity.Hopper;
 import net.minecraft.block.entity.HopperBlockEntity;
-import net.minecraft.util.math.Direction;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.LazyOptional;

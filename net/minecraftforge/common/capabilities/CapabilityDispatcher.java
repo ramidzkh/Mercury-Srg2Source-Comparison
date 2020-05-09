@@ -28,10 +28,10 @@ import java.util.Map;
 import com.google.common.collect.Lists;
 
 import mcp.MethodsReturnNonnullByDefault;
-import net.minecraft.nbt.Tag;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.util.math.Direction;
+import net.minecraft.nbt.Tag;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.Direction;
 import net.minecraftforge.common.util.INBTSerializable;
 import net.minecraftforge.common.util.LazyOptional;
 

@@ -19,8 +19,8 @@
 
 package net.minecraftforge.energy;
 
-import net.minecraft.nbt.Tag;
 import net.minecraft.nbt.IntTag;
+import net.minecraft.nbt.Tag;
 import net.minecraft.util.math.Direction;
 import net.minecraftforge.common.capabilities.*;
 import net.minecraftforge.common.capabilities.Capability.IStorage;

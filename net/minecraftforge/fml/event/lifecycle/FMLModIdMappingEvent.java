@@ -22,12 +22,11 @@ package net.minecraftforge.fml.event.lifecycle;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
+import net.minecraft.util.Identifier;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
-
-import net.minecraft.util.Identifier;
 
 /**
  * Called whenever the ID mapping might have changed. If you register for this event, you

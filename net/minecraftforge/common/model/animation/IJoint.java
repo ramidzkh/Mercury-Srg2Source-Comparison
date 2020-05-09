@@ -20,7 +20,6 @@
 package net.minecraftforge.common.model.animation;
 
 import java.util.Optional;
-
 import net.minecraft.client.util.math.Rotation3;
 
 /**

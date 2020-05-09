@@ -31,7 +31,6 @@ import com.google.common.collect.HashBiMap;
 import com.google.common.collect.Maps;
 import com.google.common.collect.Sets;
 import com.google.common.collect.Sets.SetView;
-
 import net.minecraft.util.Identifier;
 import net.minecraftforge.fml.network.FMLHandshakeMessages;
 import net.minecraftforge.registries.ForgeRegistry.Snapshot;

@@ -20,10 +20,10 @@
 package net.minecraftforge.common.brewing;
 
 import net.minecraft.item.Items;
+import net.minecraft.recipe.BrewingRecipeRegistry;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.recipe.BrewingRecipeRegistry;
-
+import javax.annotation.Nonnull;
 
 /**
  * Used in BrewingRecipeRegistry to maintain the vanilla behaviour.

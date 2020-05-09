@@ -22,17 +22,16 @@ package net.minecraftforge.common.extensions;
 import java.util.Set;
 
 import javax.annotation.Nullable;
-
 import net.minecraft.block.Material;
 import net.minecraft.entity.Entity;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.tag.Tag;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.math.Box;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.explosion.Explosion;
+import net.minecraft.util.math.Box;
 import net.minecraft.world.WorldView;
+import net.minecraft.world.explosion.Explosion;
 import net.minecraftforge.fluids.FluidAttributes;
 
 public interface IForgeFluid

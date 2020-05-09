@@ -22,7 +22,6 @@ package net.minecraftforge.server.permission.context;
 import com.google.common.base.Preconditions;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.math.Box;
-
 import javax.annotation.Nullable;
 
 public class AreaContext extends PlayerContext

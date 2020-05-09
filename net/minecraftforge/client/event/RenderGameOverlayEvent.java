@@ -20,11 +20,10 @@
 package net.minecraftforge.client.event;
 
 import java.util.ArrayList;
-
+import net.minecraft.client.gui.hud.ClientBossBar;
+import net.minecraft.client.util.Window;
 import net.minecraftforge.eventbus.api.Cancelable;
 import net.minecraftforge.eventbus.api.Event;
-import net.minecraft.client.util.Window;
-import net.minecraft.client.gui.hud.ClientBossBar;
 
 @Cancelable
 public class RenderGameOverlayEvent extends Event

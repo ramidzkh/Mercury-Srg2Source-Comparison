@@ -20,7 +20,6 @@
 package net.minecraftforge.client.event;
 
 import java.util.Map;
-
 import net.minecraft.client.render.model.BakedModel;
 import net.minecraft.client.render.model.BakedModelManager;
 import net.minecraft.util.Identifier;

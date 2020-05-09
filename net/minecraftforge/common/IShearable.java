@@ -26,7 +26,6 @@ import net.minecraft.util.DefaultedList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.WorldView;
-
 import javax.annotation.Nonnull;
 
 /**

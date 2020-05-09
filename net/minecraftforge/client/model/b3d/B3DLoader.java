@@ -36,14 +36,25 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-
-import net.minecraft.client.util.math.MatrixStack;
+import net.minecraft.client.render.VertexFormatElement;
+import net.minecraft.client.render.model.BakedModel;
+import net.minecraft.client.render.model.BakedQuad;
+import net.minecraft.client.render.model.ModelBakeSettings;
+import net.minecraft.client.render.model.ModelLoader;
+import net.minecraft.client.render.model.UnbakedModel;
+import net.minecraft.client.render.model.json.ModelItemPropertyOverrideList;
+import net.minecraft.client.render.model.json.ModelTransformation.Mode;
+import net.minecraft.client.renderer.model.*;
+import net.minecraft.client.texture.MissingSprite;
+import net.minecraft.client.texture.Sprite;
+import net.minecraft.client.texture.SpriteAtlasTexture;
+import net.minecraft.client.util.SpriteIdentifier;
 import net.minecraft.client.util.math.Matrix4f;
+import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.client.util.math.Rotation3;
 import net.minecraft.client.util.math.Vector3f;
-import net.minecraft.client.texture.SpriteAtlasTexture;
-import net.minecraft.client.texture.MissingSprite;
-import net.minecraft.client.render.VertexFormatElement;
+import net.minecraft.resource.Resource;
+import net.minecraft.resource.ResourceManager;
 import net.minecraftforge.client.model.*;
 import net.minecraftforge.common.model.*;
 import net.minecraftforge.resource.IResourceType;
@@ -64,12 +75,8 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
 
 import net.minecraft.block.BlockState;
-import net.minecraft.client.render.model.json.ModelTransformation.Mode;
-import net.minecraft.client.texture.Sprite;
-import net.minecraft.resource.Resource;
-import net.minecraft.resource.ResourceManager;
-import net.minecraft.util.math.Direction;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.MathHelper;
 import net.minecraftforge.client.model.b3d.B3DModel.Animation;
 import net.minecraftforge.client.model.b3d.B3DModel.Face;
@@ -85,14 +92,6 @@ import net.minecraftforge.client.model.pipeline.IVertexConsumer;
 import net.minecraftforge.common.model.animation.IClip;
 import net.minecraftforge.common.model.animation.IJoint;
 import net.minecraftforge.common.property.Properties;
-
-import net.minecraft.client.render.model.BakedModel;
-import net.minecraft.client.render.model.BakedQuad;
-import net.minecraft.client.render.model.ModelBakeSettings;
-import net.minecraft.client.render.model.ModelLoader;
-import net.minecraft.client.render.model.UnbakedModel;
-import net.minecraft.client.render.model.json.ModelItemPropertyOverrideList;
-import net.minecraft.client.util.SpriteIdentifier;
 
 /*
  * Loader for Blitz3D models.
@@ -725,7 +724,7 @@ public enum B3DLoader implements ISelectiveResourceReloadListener
                     if(f.getBrush() != null) textures = f.getBrush().getTextures();
                     Sprite sprite;
                     if(textures == null || textures.isEmpty()) sprite = this.textures.get("missingno");
-                    else if(textures.get(0) == B3DModel.Texture.White) sprite = ModelLoader.White.instance();
+                    else if(textures.get(0) == B3DModel.Texture.White) sprite = net.minecraftforge.client.model.ModelLoader.White.instance();
                     else sprite = this.textures.get(textures.get(0).getPath());
                     BakedQuadBuilder quadBuilder = new BakedQuadBuilder(sprite);
                     quadBuilder.setContractUVs(true);

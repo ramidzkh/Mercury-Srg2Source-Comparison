@@ -26,18 +26,26 @@ import com.google.common.collect.Sets;
 import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonObject;
 import com.mojang.datafixers.util.Pair;
-import net.minecraft.util.math.Quaternion;
-import net.minecraft.client.util.math.Rotation3;
+import net.minecraft.client.render.model.BakedQuad;
+import net.minecraft.client.render.model.ModelBakeSettings;
+import net.minecraft.client.render.model.ModelLoader;
+import net.minecraft.client.render.model.UnbakedModel;
+import net.minecraft.client.render.model.json.ModelItemPropertyOverrideList;
 import net.minecraft.client.render.model.json.ModelTransformation.Mode;
+import net.minecraft.client.renderer.model.*;
 import net.minecraft.client.texture.MissingSprite;
 import net.minecraft.client.texture.Sprite;
+import net.minecraft.client.util.ModelIdentifier;
+import net.minecraft.client.util.SpriteIdentifier;
+import net.minecraft.client.util.math.Rotation3;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.item.ItemStack;
 import net.minecraft.resource.ResourceManager;
-import net.minecraft.util.math.Direction;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.Direction;
+import net.minecraft.util.math.Quaternion;
 import net.minecraft.world.World;
 import net.minecraftforge.client.ForgeHooksClient;
 import net.minecraftforge.client.model.geometry.IModelGeometry;
@@ -56,15 +64,6 @@ import java.util.Map;
 import java.util.Set;
 import java.util.function.Function;
 import java.util.function.Predicate;
-
-import net.minecraft.client.render.model.BakedModel;
-import net.minecraft.client.render.model.BakedQuad;
-import net.minecraft.client.render.model.ModelBakeSettings;
-import net.minecraft.client.render.model.ModelLoader;
-import net.minecraft.client.render.model.UnbakedModel;
-import net.minecraft.client.render.model.json.ModelItemPropertyOverrideList;
-import net.minecraft.client.util.ModelIdentifier;
-import net.minecraft.client.util.SpriteIdentifier;
 
 public final class DynamicBucketModel implements IModelGeometry<DynamicBucketModel>
 {
@@ -102,7 +101,7 @@ public final class DynamicBucketModel implements IModelGeometry<DynamicBucketMod
     }
 
     @Override
-    public BakedModel bake(IModelConfiguration owner, ModelLoader bakery, Function<SpriteIdentifier, Sprite> spriteGetter, ModelBakeSettings modelTransform, ModelItemPropertyOverrideList overrides, Identifier modelLocation)
+    public net.minecraft.client.render.model.BakedModel bake(IModelConfiguration owner, ModelLoader bakery, Function<SpriteIdentifier, Sprite> spriteGetter, ModelBakeSettings modelTransform, ModelItemPropertyOverrideList overrides, Identifier modelLocation)
     {
         SpriteIdentifier particleLocation = owner.resolveTexture("particle");
         if (MissingSprite.getMissingSpriteId().equals(particleLocation.getTextureId()))
@@ -273,7 +272,7 @@ public final class DynamicBucketModel implements IModelGeometry<DynamicBucketMod
         }
 
         @Override
-        public BakedModel apply(BakedModel originalModel, ItemStack stack, @Nullable World world, @Nullable LivingEntity entity)
+        public net.minecraft.client.render.model.BakedModel apply(net.minecraft.client.render.model.BakedModel originalModel, ItemStack stack, @Nullable World world, @Nullable LivingEntity entity)
         {
             return FluidUtil.getFluidContained(stack)
                     .map(fluidStack -> {
@@ -285,7 +284,7 @@ public final class DynamicBucketModel implements IModelGeometry<DynamicBucketMod
                         if (!model.cache.containsKey(name))
                         {
                             DynamicBucketModel parent = model.parent.withFluid(fluid);
-                            BakedModel bakedModel = parent.bake(model.owner, bakery, ModelLoader.defaultTextureGetter(), model.originalTransform, model.getItemPropertyOverrides(), new Identifier("forge:bucket_override"));
+                            net.minecraft.client.render.model.BakedModel bakedModel = parent.bake(model.owner, bakery, net.minecraftforge.client.model.ModelLoader.defaultTextureGetter(), model.originalTransform, model.getItemPropertyOverrides(), new Identifier("forge:bucket_override"));
                             model.cache.put(name, bakedModel);
                             return bakedModel;
                         }
@@ -302,7 +301,7 @@ public final class DynamicBucketModel implements IModelGeometry<DynamicBucketMod
     {
         private final IModelConfiguration owner;
         private final DynamicBucketModel parent;
-        private final Map<String, BakedModel> cache; // contains all the baked models since they'll never change
+        private final Map<String, net.minecraft.client.render.model.BakedModel> cache; // contains all the baked models since they'll never change
         private final ModelBakeSettings originalTransform;
         private final boolean isSideLit;
 
@@ -311,7 +310,7 @@ public final class DynamicBucketModel implements IModelGeometry<DynamicBucketMod
                    ImmutableList<BakedQuad> quads,
                    Sprite particle,
                    ImmutableMap<Mode, Rotation3> transforms,
-                   Map<String, BakedModel> cache,
+                   Map<String, net.minecraft.client.render.model.BakedModel> cache,
                    boolean untransformed,
                    ModelBakeSettings originalTransform, boolean isSideLit)
         {

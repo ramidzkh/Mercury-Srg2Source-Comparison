@@ -25,8 +25,8 @@ import java.util.stream.Collectors;
 import org.apache.commons.lang3.Validate;
 
 import com.google.common.collect.ImmutableList;
-import net.minecraft.util.Identifier;
 import net.minecraftforge.fml.ModContainer;
+import net.minecraft.util.Identifier;
 import net.minecraftforge.eventbus.api.GenericEvent;
 import net.minecraftforge.registries.IForgeRegistry;
 import net.minecraftforge.registries.IForgeRegistryEntry;

@@ -21,8 +21,8 @@ package net.minecraftforge.fml.network;
 
 import io.netty.buffer.Unpooled;
 import net.minecraft.network.ClientConnection;
-import net.minecraft.util.PacketByteBuf;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.PacketByteBuf;
 import net.minecraftforge.fml.network.event.EventNetworkChannel;
 import org.apache.commons.lang3.tuple.Pair;
 import org.apache.logging.log4j.LogManager;

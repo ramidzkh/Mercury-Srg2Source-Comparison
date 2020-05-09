@@ -20,14 +20,13 @@
 package net.minecraftforge.common.model.animation;
 
 import java.io.IOException;
-
-import net.minecraft.client.util.math.Rotation3;
 import net.minecraft.client.render.model.ModelBakeSettings;
 import net.minecraft.client.render.model.UnbakedModel;
 import net.minecraft.client.util.ModelIdentifier;
+import net.minecraft.client.util.math.Rotation3;
+import net.minecraft.util.Identifier;
 import net.minecraft.util.StringIdentifiable;
 import net.minecraft.util.math.MathHelper;
-import net.minecraft.util.Identifier;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.common.animation.Event;

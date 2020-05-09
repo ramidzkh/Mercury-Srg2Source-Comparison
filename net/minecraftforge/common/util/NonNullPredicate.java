@@ -19,6 +19,7 @@
 
 package net.minecraftforge.common.util;
 
+import java.util.function.Predicate;
 
 import javax.annotation.Nonnull;
 

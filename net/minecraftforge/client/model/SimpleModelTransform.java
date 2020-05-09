@@ -19,10 +19,9 @@
 
 package net.minecraftforge.client.model;
 
-import net.minecraft.client.util.math.Rotation3;
-import net.minecraft.client.render.model.ModelBakeSettings;
-
 import com.google.common.collect.ImmutableMap;
+import net.minecraft.client.render.model.ModelBakeSettings;
+import net.minecraft.client.util.math.Rotation3;
 
 /**
  * Simple implementation of IModelState via a map and a default value.

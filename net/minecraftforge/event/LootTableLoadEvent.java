@@ -19,9 +19,9 @@
 
 package net.minecraftforge.event;
 
-import net.minecraft.util.Identifier;
-import net.minecraft.loot.LootTable;
 import net.minecraft.loot.LootManager;
+import net.minecraft.loot.LootTable;
+import net.minecraft.util.Identifier;
 import net.minecraftforge.eventbus.api.Cancelable;
 import net.minecraftforge.eventbus.api.Event;
 

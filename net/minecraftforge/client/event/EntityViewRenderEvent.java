@@ -20,12 +20,10 @@
 package net.minecraftforge.client.event;
 
 import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.render.Camera;
 import net.minecraft.client.render.BackgroundRenderer.FogType;
+import net.minecraft.client.render.Camera;
 import net.minecraft.client.render.GameRenderer;
 import net.minecraftforge.eventbus.api.Cancelable;
-
-import net.minecraftforge.eventbus.api.Event.HasResult;
 
 /**
  * Event that hooks into GameRenderer, allowing any feature to customize visual attributes

@@ -21,7 +21,6 @@ package net.minecraftforge.common.brewing;
 
 import net.minecraft.item.ItemStack;
 import net.minecraft.recipe.Ingredient;
-
 import javax.annotation.Nonnull;
 
 public class BrewingRecipe implements IBrewingRecipe

@@ -20,8 +20,8 @@
 package net.minecraftforge.client.event;
 
 import net.minecraft.client.texture.NativeImage;
-import net.minecraft.text.Text;
 import net.minecraft.text.LiteralText;
+import net.minecraft.text.Text;
 import net.minecraftforge.eventbus.api.Cancelable;
 import net.minecraftforge.eventbus.api.Event;
 

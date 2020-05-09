@@ -20,19 +20,18 @@
 package net.minecraftforge.client.model;
 
 import com.google.common.collect.ImmutableList;
-
-import net.minecraft.client.options.GameOptions;
 import net.minecraft.client.font.TextRenderer;
+import net.minecraft.client.options.GameOptions;
+import net.minecraft.client.render.VertexFormatElement;
+import net.minecraft.client.render.model.BakedQuad;
+import net.minecraft.client.texture.Sprite;
+import net.minecraft.client.texture.TextureManager;
 import net.minecraft.client.util.math.Matrix4f;
 import net.minecraft.client.util.math.Rotation3;
 import net.minecraft.client.util.math.Vector3f;
 import net.minecraft.client.util.math.Vector4f;
-import net.minecraft.client.render.model.BakedQuad;
-import net.minecraft.client.texture.Sprite;
-import net.minecraft.client.texture.TextureManager;
-import net.minecraft.client.render.VertexFormatElement;
-import net.minecraft.util.math.Direction;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.Direction;
 import net.minecraftforge.client.model.pipeline.BakedQuadBuilder;
 
 public abstract class SimpleModelFontRenderer extends TextRenderer {

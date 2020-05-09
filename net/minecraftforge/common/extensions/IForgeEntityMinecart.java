@@ -19,10 +19,10 @@
 
 package net.minecraftforge.common.extensions;
 
-import net.minecraft.entity.vehicle.AbstractMinecartEntity;
 import net.minecraft.item.Items;
-import net.minecraft.item.ItemStack;
 import net.minecraft.tag.BlockTags;
+import net.minecraft.entity.vehicle.AbstractMinecartEntity;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraftforge.common.IMinecartCollisionHandler;

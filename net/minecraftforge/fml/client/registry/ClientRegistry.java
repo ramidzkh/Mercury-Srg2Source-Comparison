@@ -19,17 +19,15 @@
 
 package net.minecraftforge.fml.client.registry;
 
+import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.block.entity.BlockEntityType;
+import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.options.KeyBinding;
+import net.minecraft.client.render.block.entity.BlockEntityRenderDispatcher;
 import net.minecraft.client.render.block.entity.BlockEntityRenderer;
 import net.minecraft.entity.Entity;
-import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.util.Identifier;
 import org.apache.commons.lang3.ArrayUtils;
-
-import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.render.block.entity.BlockEntityRenderDispatcher;
-import net.minecraft.client.options.KeyBinding;
-import net.minecraft.block.entity.BlockEntity;
-
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Function;

@@ -20,8 +20,8 @@
 package net.minecraftforge.client.model;
 
 import com.google.common.base.Objects;
-import net.minecraft.client.util.math.Rotation3;
 import net.minecraft.client.render.model.ModelBakeSettings;
+import net.minecraft.client.util.math.Rotation3;
 
 /**
  * An {@link IModelTransform} that combines the transforms from two child {@link IModelTransform}.

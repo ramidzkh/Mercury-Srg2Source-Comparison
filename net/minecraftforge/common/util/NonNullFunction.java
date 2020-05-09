@@ -19,6 +19,7 @@
 
 package net.minecraftforge.common.util;
 
+import java.util.function.Function;
 
 import javax.annotation.Nonnull;
 

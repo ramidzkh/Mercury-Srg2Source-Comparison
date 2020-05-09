@@ -20,11 +20,10 @@
 package net.minecraftforge.client.model;
 
 import com.google.common.collect.Lists;
-
-import net.minecraft.client.util.math.Rotation3;
+import net.minecraft.client.render.VertexFormat;
 import net.minecraft.client.render.model.BakedQuad;
 import net.minecraft.client.texture.Sprite;
-import net.minecraft.client.render.VertexFormat;
+import net.minecraft.client.util.math.Rotation3;
 import net.minecraft.util.math.Direction;
 import net.minecraftforge.client.model.pipeline.BakedQuadBuilder;
 import net.minecraftforge.client.model.pipeline.IVertexConsumer;

@@ -37,11 +37,9 @@ import com.google.gson.JsonSerializationContext;
 import com.google.gson.JsonSerializer;
 import com.google.gson.JsonSyntaxException;
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
-
-import net.minecraft.nbt.StringNbtReader;
-import net.minecraft.nbt.CompoundTag;
-
 import javax.annotation.Nullable;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.StringNbtReader;
 
 public class JsonUtils
 {

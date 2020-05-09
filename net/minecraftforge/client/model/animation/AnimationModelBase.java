@@ -19,9 +19,22 @@
 
 package net.minecraftforge.client.model.animation;
 
+import java.util.List;
+import java.util.Random;
+import net.minecraft.entity.Entity;
+import net.minecraft.block.Blocks;
+import net.minecraft.util.math.BlockPos;
+import net.minecraftforge.client.model.ModelLoader;
+import net.minecraftforge.client.model.ModelLoaderRegistry;
+import net.minecraftforge.client.model.pipeline.VertexLighterFlat;
+import net.minecraftforge.client.model.pipeline.VertexBufferConsumer;
+import net.minecraftforge.common.animation.Event;
+import net.minecraftforge.common.animation.IEventHandler;
+import net.minecraftforge.common.model.animation.CapabilityAnimation;
 
+import org.lwjgl.opengl.GL11;
 
-
+import com.mojang.blaze3d.platform.GlStateManager;
 
 /**
  * ModelBase that works with the Forge model system and animations.

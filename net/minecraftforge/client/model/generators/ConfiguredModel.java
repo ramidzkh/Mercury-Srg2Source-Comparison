@@ -30,9 +30,9 @@ import com.google.common.base.Preconditions;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ObjectArrays;
 import com.google.gson.JsonObject;
-
 import net.minecraft.client.render.model.ModelRotation;
 import net.minecraftforge.client.model.generators.MultiPartBlockStateBuilder.PartBuilder;
+import net.minecraftforge.client.model.generators.VariantBlockStateBuilder.PartialBlockstate;
 
 /**
  * Represents a model with blockstate configurations, e.g. rotation, uvlock, and

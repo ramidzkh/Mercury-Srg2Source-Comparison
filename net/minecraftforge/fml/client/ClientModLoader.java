@@ -19,6 +19,8 @@
 
 package net.minecraftforge.fml.client;
 
+import static net.minecraftforge.fml.Logging.CORE;
+import static net.minecraftforge.fml.loading.LogMarkers.LOADING;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -36,18 +38,17 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import com.mojang.blaze3d.systems.RenderSystem;
-
 import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.resource.ClientResourcePackProfile;
 import net.minecraft.client.resource.ClientBuiltinResourcePackProvider;
-import net.minecraft.util.profiler.Profiler;
-import net.minecraft.resource.ResourceReloadListener;
+import net.minecraft.client.resource.ClientResourcePackProfile;
 import net.minecraft.resource.ReloadableResourceManager;
 import net.minecraft.resource.ResourceManager;
-import net.minecraft.resource.ResourcePackProfile;
 import net.minecraft.resource.ResourcePackManager;
+import net.minecraft.resource.ResourcePackProfile;
+import net.minecraft.resource.ResourceReloadListener;
 import net.minecraft.resource.metadata.PackResourceMetadata;
 import net.minecraft.text.TranslatableText;
+import net.minecraft.util.profiler.Profiler;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.client.event.ModelRegistryEvent;

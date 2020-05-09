@@ -41,6 +41,7 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import static net.minecraftforge.fml.Logging.LOADING;
 
 /**
  * Master list of all mods - game-side version. This is classloaded in the game scope and

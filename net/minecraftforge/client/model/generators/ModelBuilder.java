@@ -35,19 +35,18 @@ import com.google.common.base.Preconditions;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
-
-import net.minecraft.client.util.math.Vector3f;
-import net.minecraft.client.render.model.json.ModelElementTexture;
+import net.minecraft.client.render.model.json.JsonUnbakedModel.GuiLight;
 import net.minecraft.client.render.model.json.ModelElement;
 import net.minecraft.client.render.model.json.ModelElementFace;
+import net.minecraft.client.render.model.json.ModelElementTexture;
 import net.minecraft.client.render.model.json.ModelRotation;
 import net.minecraft.client.render.model.json.ModelTransformation.Mode;
 import net.minecraft.client.render.model.json.Transformation;
-import net.minecraft.client.render.model.json.JsonUnbakedModel.GuiLight;
 import net.minecraft.client.texture.MissingSprite;
+import net.minecraft.client.util.math.Vector3f;
 import net.minecraft.resource.ResourceType;
-import net.minecraft.util.math.Direction;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.MathHelper;
 
 /**

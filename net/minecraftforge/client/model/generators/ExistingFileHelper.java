@@ -25,16 +25,16 @@ import java.nio.file.Path;
 import java.util.Collection;
 
 import com.google.common.annotations.VisibleForTesting;
-
-import net.minecraft.resource.ZipResourcePack;
+import net.minecraft.resource.DefaultResourcePack;
 import net.minecraft.resource.DirectoryResourcePack;
+import net.minecraft.resource.ReloadableResourceManagerImpl;
 import net.minecraft.resource.Resource;
 import net.minecraft.resource.ResourceManager;
 import net.minecraft.resource.ResourcePack;
 import net.minecraft.resource.ResourceType;
-import net.minecraft.resource.ReloadableResourceManagerImpl;
-import net.minecraft.resource.DefaultResourcePack;
+import net.minecraft.resource.ZipResourcePack;
 import net.minecraft.util.Identifier;
+import net.minecraftforge.fml.event.lifecycle.GatherDataEvent;
 
 /**
  * Enables data providers to check if other data files currently exist. The
